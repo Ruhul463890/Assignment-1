@@ -1,0 +1,77 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    background-image: linear-gradient(to right, #7158e2, #8854d0);
+    width: 100%;
+    height: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card{
+    background-color: aliceblue;
+    width: 40%;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.429);
+}
+h1{
+    margin-bottom: 15px;
+}
+input{
+    padding: 6px;
+    margin: 10px;
+    border-radius: 4px;
+    border: 1px solid #999999;
+}
+label{ 
+    margin: 5px 0px;
+}
+.form-field{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+.field{
+    width: 40%;
+}
+.label{
+    width: 10%;
+}
+.label1{
+    margin-top: 5px;
+    margin-left: 10px;
+    width: 10%;
+}
+.name{
+    margin-top: 16px;
+}
+.name1{
+    margin-top: 6px;
+    margin-left: 10px;
+}
+
+button{
+    padding: 8px 20px;
+    border-radius: 5px;
+    margin-top: 25px;
+}
+.cancel{
+    background-image: linear-gradient(to right, #ff3526, #f1554a);    
+    color: white;
+    border: 0;
+}
+.cancel:hover{
+    background-image: linear-gradient(to left, #ff3426e7, #f1554af0);   
+}
+.submit{
+    background-image: linear-gradient(to right, #7158e2, #8854d0);    
+    color: white;
+    border: 0;
+    margin-left: 10px;
+}
+.submit:hover{
+    background-image: linear-gradient(to left, #7158e2d3, #8854d0da);    
+}
