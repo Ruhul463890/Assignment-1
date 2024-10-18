@@ -1,10 +1,10 @@
 <?php
 
 $subject1 = 85;
-$subject2 = 15;
-$subject3 = 35;
+$subject2 = 59;
+$subject3 = 33;
 $subject4 = 45;
-$subject5 = 79;
+$subject5 = 77;
 
 function checkValidation()
 {
@@ -15,6 +15,16 @@ function checkValidation()
     } else if ($subject1 < 0 ||  $subject2 < 0 || $subject3 < 0 || $subject4 < 0 || $subject5 < 0) {
         return false;
     } else {
+        return true;
+    }
+}
+
+function isFail(){
+    global $subject1, $subject2, $subject3, $subject4, $subject5;
+    if ($subject1 < 33 ||  $subject2 < 33 || $subject3 < 33 || $subject4 < 33 || $subject5 < 33){
+        return false;
+    }
+    else{
         return true;
     }
 }
@@ -52,16 +62,14 @@ function grading()
         echo "You got grade C";
     } else if (averageMarks() >= 33 && averageMarks() < 40) {
         echo "You got grade D";
-    } else {
-        echo "You got grade F";
     }
 }
 
 if (checkValidation() == false) {
-    echo "mark range is invalid.\n";
+    echo "Mark range is invalid.\n";
 } else {
-    if (averageMarks() < 33) {
-        grading();
+    if (isFail()==false) {
+        echo "You got grade F \n";
         echo PHP_EOL;
     } else {
         echo "Your total marks is " . CalculateTotalMarks() .",";
