@@ -3,7 +3,7 @@
 $subject1 = 85;
 $subject2 = 59;
 $subject3 = 33;
-$subject4 = 45;
+$subject4 = 78;
 $subject5 = 77;
 
 function checkValidation()
@@ -21,6 +21,7 @@ function checkValidation()
 
 function isFail(){
     global $subject1, $subject2, $subject3, $subject4, $subject5;
+
     if ($subject1 < 33 ||  $subject2 < 33 || $subject3 < 33 || $subject4 < 33 || $subject5 < 33){
         return false;
     }
@@ -50,18 +51,25 @@ function averageMarks(): float
 
 function grading()
 {
-    if (averageMarks() >= 80 && averageMarks() <= 100) {
-        echo "You got grade A+";
-    } else if (averageMarks() >= 70 && averageMarks() < 80) {
-        echo "You got grade A";
-    } else if (averageMarks() >= 60 && averageMarks() < 70) {
-        echo "You got grade A-";
-    } else if (averageMarks() >= 50 && averageMarks() < 60) {
-        echo "You got grade B";
-    } else if (averageMarks() >= 40 && averageMarks() < 50) {
-        echo "You got grade C";
-    } else if (averageMarks() >= 33 && averageMarks() < 40) {
-        echo "You got grade D";
+    switch(averageMarks()){
+        case(averageMarks() >= 80 && averageMarks() <= 100):
+            echo "You got grade A+";
+        break;
+        case(averageMarks() >= 70 && averageMarks() < 80):
+            echo "You got grade A";
+        break;
+        case(averageMarks() >= 60 && averageMarks() < 70):
+            echo "You got grade A-";
+        break;
+        case(averageMarks() >= 50 && averageMarks() < 60):
+            echo "You got grade B";
+        break;
+        case(averageMarks() >= 40 && averageMarks() < 50):
+            echo "You got grade C";
+        break;
+        case(averageMarks() >= 33 && averageMarks() < 40):
+            echo "You got grade D";
+        break;
     }
 }
 
